@@ -53,7 +53,6 @@ export default {
     font-size: 72px;
     z-index: 2;
     -moz-user-select: none;
-    -khtml-user-select: none;
     user-select: none;
   }
 }

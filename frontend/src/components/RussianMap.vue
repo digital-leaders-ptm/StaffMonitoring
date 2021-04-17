@@ -1,5 +1,5 @@
 <template>
-    <svg viewBox="0 0 990 560"  xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 30 990 510"  xmlns="http://www.w3.org/2000/svg">
         <g>
         <RegionPath 
             v-for="(item, key) in  regions" 
@@ -28,7 +28,7 @@ export default {
 <style lang="less" scoped>
 svg {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   .state {
     stroke-width: 1;
     stroke: #fff;
@@ -45,13 +45,8 @@ svg .state:hover,
   stroke: #000;
 }
 
-path {
-  fill: #2F80ED;
-  opacity: 0.75;
-}
-
 .regionActive {
-  fill: #EB5757;
+  fill: blue;
   opacity: 0.75;
 }
 

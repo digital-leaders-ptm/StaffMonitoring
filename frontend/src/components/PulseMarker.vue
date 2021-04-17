@@ -17,7 +17,7 @@ export default {
 <style lang="less">
 @pulse-size: 50px;
 @ring-size: 20px;
-@boreder-ring-size: 5px;
+@border-ring-size: 5px;
 @circle-size: 10px;
 .pulse-marker {
   position: absolute;
@@ -32,7 +32,7 @@ export default {
   .pulse {
     width: @ring-size;
     height: @ring-size;
-    border: @boreder-ring-size solid #ef5350;
+    border: @border-ring-size solid blue;
     border-radius: 50%;
     animation: pulse 1s ease-out infinite;
     display: flex;
@@ -44,8 +44,8 @@ export default {
     width: @circle-size;
     height: @circle-size;
     border-radius: 50%;
-    margin-left: -40%;
-    background: #ef5350;
+    margin-left: -30%;
+    background: blue;
   }
 }
 @keyframes pulse {
