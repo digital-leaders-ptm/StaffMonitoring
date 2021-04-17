@@ -9,6 +9,17 @@ namespace StaffMonitoring.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        
+        public double Coefficient { get; set; }
+
+        public Region(int id, string name, double coefficient)
+        {
+            Id = id;
+            Name = name;
+            Coefficient = coefficient;
+        }
+
+        public Region()
+        {
+        }
     }
 }
