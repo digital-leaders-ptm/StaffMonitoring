@@ -8,21 +8,19 @@ namespace StaffMonitoring.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RegionController : ControllerBase
+    public class CourseController : ControllerBase
     {
         private readonly ApplicationContext db;
 
-        public RegionController(ApplicationContext db)
+        public CourseController(ApplicationContext db)
         {
             this.db = db;
         }
 
         [HttpGet]
-        public IEnumerable<RegionValuesDTO> GetRegions()
+        public IEnumerable<string> GetCourses()
         {
-            //TODO
-            var rand = new Random();
-            return db.Regions.Select(region => new RegionValuesDTO() {Region = region.Name, Value = rand.NextDouble()});
+            return db.Courses.Select(course => course.Name);
         }
     }
 }

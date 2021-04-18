@@ -2,7 +2,7 @@
 
 namespace StaffMonitoring.Models
 {
-    public class RegionCoursesDTO
+    public class RegionVacanciesDTO
     {
         public string Region { get; set; }
         public ICollection<Course> Courses { get; set; }

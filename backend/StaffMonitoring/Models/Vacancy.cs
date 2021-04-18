@@ -6,5 +6,6 @@ namespace StaffMonitoring.Models
     {
         public int Id { get; set; }
         public ICollection<Skill> Skills { get; set; }
+        public ICollection<RegionVacancy> Regions { get; set; }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace StaffMonitoring.Models
 {
@@ -9,6 +6,7 @@ namespace StaffMonitoring.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        
+        public ICollection<RegionVacancy> Vacancies { get; set; }
+        public ICollection<RegionCourse> Courses { get; set; }
     }
 }

@@ -1,10 +1,15 @@
 <template>
-     <div class="wrapper" @click="goEvent($event)">
-       <div class="wrapper-title">{{msg}}</div>
-       <RussianMap/>
-       <v-dialog />
-       <PulseMarker v-if="x && y" :pointX="x" :pointY="y"/>
-     </div>
+  <div>
+    <b-select v-model="selected" :options="options"></b-select>
+    <div class="wrapper" @click="goEvent($event)">
+      <div class="wrapper-title">{{ msg }}</div>
+      <RussianMap/>
+      <v-dialog/>
+      <PulseMarker v-if="x && y" :pointX="x" :pointY="y"/>
+    </div>
+    <img src="/legend.jpg" alt="image can't be displayed" style="float: right"/>
+    <img src="/chart.png" alt="image can't be displayed" height="500px" style="float: left"/>
+  </div>
 </template>
 
 <script>
@@ -18,13 +23,24 @@ export default {
   data() {
     return {
       x: null,
-      y: null
+      y: null,
+      selected: 0,
+      options: [
+        {value: 0, text: 'Все IT-направления'},
+        {value: 1, text: 'Программная инженерия'},
+        {value: 2, text: 'Информатика и вычислительная техника'},
+        {value: 3, text: 'Прикладная информатика'},
+        {value: 4, text: 'Информационные системы и технологии'},
+        {value: 5, text: 'Математическое обеспечение и администрирование информационных систем'},
+        {value: 6, text: 'Прикладная математика и информатика'},
+        {value: 7, text: "Фундаментальная информатика и информационные технологии"}
+      ]
     };
   },
   methods: {
     goEvent(event) {
       this.x = event.x - 25;
-      this.y = event.y - 25;
+      this.y = event.y - 25 + window.scrollY;
     }
   },
   components: {
@@ -34,16 +50,17 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
 * {
   margin: 0;
   padding: 0;
 }
+
 .wrapper {
   margin: 0;
   height: 100%;
   overflow: hidden;
+
   .wrapper-title {
     position: absolute;
     margin-left: auto;

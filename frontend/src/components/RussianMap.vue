@@ -1,5 +1,5 @@
 <template>
-    <svg viewBox="0 30 990 510"  xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="60 30 990 510"  xmlns="http://www.w3.org/2000/svg">
         <g>
         <RegionPath 
             v-for="(item, key) in  regions" 
